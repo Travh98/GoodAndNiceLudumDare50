@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class ChasePlayer : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 1f;
     public float stoppingDistance = 2f;
     public bool stopWhenClose = false;
     public Rigidbody2D rb;

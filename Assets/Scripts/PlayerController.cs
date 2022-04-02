@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     Vector2 movement;
     private PlayerControls playerControls;
+    public bool alive = true;
 
     void Awake()
     {
@@ -33,6 +33,21 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if(rb)
+        {
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        }
+        if(moveSpeed <= 0)
+        {
+            // Too slow and old to live
+            OnDeath();
+        }
+    }
+
+    void OnDeath()
+    {
+        Destroy(rb);
+        alive = false;
+        // You dead son
     }
 }

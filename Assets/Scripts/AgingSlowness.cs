@@ -20,8 +20,7 @@ public class AgingSlowness : MonoBehaviour
         {
             gameObject.GetComponent<PlayerController>().moveSpeed -= speedLoss;
             cooldownTimer = cooldownTime;
-            Debug.Log("Speed loss due to age, new speed:" +
-                gameObject.GetComponent<PlayerController>().moveSpeed);
+            Debug.Log("Player is aging and losing speed");
         }
         else
         {

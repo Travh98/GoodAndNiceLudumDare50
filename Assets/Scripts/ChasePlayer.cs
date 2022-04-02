@@ -6,11 +6,8 @@ using UnityEngine;
 public class ChasePlayer : MonoBehaviour
 {
     public float moveSpeed = 1f;
-    public float boostSpeed = 5f;
-    public float boostDistance = 5f; // If player is too far from death then move faster
     public float stoppingDistance = 2f;
     public bool stopWhenClose = false;
-    public bool boostIfFar = false;
     public Rigidbody2D rb;
     public GameObject target;
     Vector2 movement;
@@ -41,15 +38,6 @@ public class ChasePlayer : MonoBehaviour
 
     void FixedUpdate()
     {
-        float distance = (target.gameObject.transform.position -
-                gameObject.transform.position).magnitude;
-        if (distance >= boostDistance && boostIfFar)
-        {
-            rb.MovePosition(rb.position + movement * boostSpeed * Time.fixedDeltaTime);
-        }
-        else
-        {
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        }
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }

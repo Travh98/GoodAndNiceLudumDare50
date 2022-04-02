@@ -13,6 +13,7 @@ public class RandomDialog : MonoBehaviour
     float randomTextTimer = 0f;
 
     TextMeshProUGUI textMeshPro;
+    public List<string> dialogList;
 
     void Start()
     {
@@ -52,7 +53,8 @@ public class RandomDialog : MonoBehaviour
     {
         if(textMeshPro)
         {
-            textMeshPro.text = "boof";
+            int randomIndex = Random.Range(0, dialogList.Count - 1);
+            textMeshPro.text = dialogList[randomIndex];
             textMeshPro.enabled = true;
             textUpTimer = textUpTime;
         }

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class AvoidPlayer : MonoBehaviour
 {
     public float moveSpeed = 3f;
@@ -37,6 +36,16 @@ public class AvoidPlayer : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if(rb)
+        {
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        }
+    }
+
+    public void Freeze()
+    {
+        moveSpeed = 0;
+        rb.velocity = Vector2.zero;
+        Destroy(rb);
     }
 }

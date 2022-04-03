@@ -15,7 +15,6 @@ public class HealthAbsorber : MonoBehaviour
     {
         gameObject.GetComponent<PlayerController>().moveSpeed +=
             healthUnits * healthToSpeedMultiplier;
-        Debug.Log("Player speed increased");
         if(particles)
         {
             particles.Play();

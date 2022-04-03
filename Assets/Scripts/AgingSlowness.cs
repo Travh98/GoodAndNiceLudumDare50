@@ -8,11 +8,41 @@ public class AgingSlowness : MonoBehaviour
     private float cooldownTimer = 0f;
     public float speedLoss = 0.25f;
 
-    // Update is called once per frame
+    SpriteRenderer spriteRenderer;
+    public Sprite skeleton;
+    public GameObject husband;
+
+    private void Awake()
+    {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+    }
+
     void FixedUpdate()
     {
         if(!gameObject.GetComponent<PlayerController>().alive)
         {
+            if (spriteRenderer && skeleton)
+            {
+                spriteRenderer.sprite = skeleton;
+            }
+            else
+            {
+                Debug.Log("Failed to die lol");
+            }
+            if(husband.GetComponentInChildren<RandomDialog>())
+            {
+                RandomDialog husbandDialog = husband.GetComponentInChildren<RandomDialog>();
+                husbandDialog.dialogList.Clear();
+                husbandDialog.dialogList.Add("Don't leave me...");
+                husbandDialog.dialogList.Add("I'll miss you");
+                husbandDialog.dialogList.Add(":(");
+                husbandDialog.ShowRandomDialog();
+                Destroy(this);
+            }
+            else
+            {
+                Debug.Log("Failed to get husbands dialog");
+            }
             return; // Do nothing, you dead
         }
 
@@ -20,7 +50,6 @@ public class AgingSlowness : MonoBehaviour
         {
             gameObject.GetComponent<PlayerController>().moveSpeed -= speedLoss;
             cooldownTimer = cooldownTime;
-            Debug.Log("Player is aging and losing speed");
         }
         else
         {

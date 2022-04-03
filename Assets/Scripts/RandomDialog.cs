@@ -49,7 +49,7 @@ public class RandomDialog : MonoBehaviour
 
     }
 
-    void ShowRandomDialog()
+    public void ShowRandomDialog()
     {
         if(textMeshPro)
         {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Dissolve : MonoBehaviour
 {
@@ -15,7 +16,14 @@ public class Dissolve : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        material = GetComponent<SpriteRenderer>().material;
+        if(GetComponent<SpriteRenderer>())
+        {
+            material = GetComponent<SpriteRenderer>().material;
+        }
+        if (GetComponent<TilemapRenderer>())
+        {
+            material = GetComponent<TilemapRenderer>().material;
+        }
     }
 
     // Update is called once per frame

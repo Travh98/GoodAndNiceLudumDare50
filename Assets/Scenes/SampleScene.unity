@@ -9635,7 +9635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 927064086651587557, guid: 6c0ebe2003f9d8040a57f457e60f027a, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 927064086651587558, guid: 6c0ebe2003f9d8040a57f457e60f027a, type: 3}
       propertyPath: m_Sprite
@@ -9699,7 +9699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 927064088592542769, guid: 6c0ebe2003f9d8040a57f457e60f027a, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 927064088592542770, guid: 6c0ebe2003f9d8040a57f457e60f027a, type: 3}
       propertyPath: radius
@@ -9707,7 +9707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7657069753002222097, guid: 6c0ebe2003f9d8040a57f457e60f027a, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7657069753002222099, guid: 6c0ebe2003f9d8040a57f457e60f027a, type: 3}
       propertyPath: looping
@@ -9809,6 +9809,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1342787955158986645, guid: ad34fb87f09b61b498f584e4e5bc458d, type: 3}
       propertyPath: cooldownTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342787955158986645, guid: ad34fb87f09b61b498f584e4e5bc458d, type: 3}
+      propertyPath: damageToPlayerAge
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1342787955158986646, guid: ad34fb87f09b61b498f584e4e5bc458d, type: 3}

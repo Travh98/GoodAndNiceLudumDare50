@@ -38,9 +38,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Environment
+    uniqueID: 3341483507
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: TextUI
     uniqueID: 3702913917
+    locked: 0
+  - name: Trees
+    uniqueID: 3436064969
     locked: 0

@@ -6,6 +6,13 @@ public class Health : MonoBehaviour
 {
     public int hitPoints = 10;
     bool alive = true;
+    SpriteRenderer spriteRenderer;
+    public Sprite skeleton;
+
+    private void Awake()
+    {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+    }
 
     public void takeDamage(int dmg, GameObject dealer)
     {
@@ -32,6 +39,14 @@ public class Health : MonoBehaviour
         if(gameObject.GetComponent<AvoidPlayer>())
         {
             gameObject.GetComponent<AvoidPlayer>().Freeze();
+        }
+        if(spriteRenderer && skeleton)
+        {
+            spriteRenderer.sprite = skeleton;
+        }
+        else
+        {
+            Debug.Log("Failed to die lol");
         }
         
         alive = false;

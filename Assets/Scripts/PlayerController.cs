@@ -9,11 +9,13 @@ public class PlayerController : MonoBehaviour
     Vector2 movement;
     private PlayerControls playerControls;
     public bool alive = true;
+    SpriteRenderer spriteRenderer;
 
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         playerControls = new PlayerControls();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     private void OnEnable()
@@ -42,7 +44,24 @@ public class PlayerController : MonoBehaviour
             // Too slow and old to live
             OnDeath();
         }
+
+        if (spriteRenderer)
+        {
+            if (movement.x > 0.0f)
+            {
+                spriteRenderer.flipX = false;
+            }
+            else if(movement.x < 0.0f)
+            {
+                spriteRenderer.flipX = true;
+            }
+        }
+        else
+        {
+            Debug.Log("Couldn't get renderer ");
+        }
     }
+
 
     void OnDeath()
     {

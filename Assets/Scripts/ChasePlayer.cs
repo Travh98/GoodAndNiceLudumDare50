@@ -11,10 +11,12 @@ public class ChasePlayer : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject target;
     Vector2 movement;
+    SpriteRenderer spriteRenderer;
 
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -33,6 +35,21 @@ public class ChasePlayer : MonoBehaviour
                 movement = (target.gameObject.transform.position -
                     gameObject.transform.position).normalized;
             }
+        }
+        if(spriteRenderer)
+        {
+            if(movement.x >= -0.1f)
+            {
+                spriteRenderer.flipX = false;
+            }
+            else
+            {
+                spriteRenderer.flipX = true;
+            }
+        }
+        else
+        {
+            Debug.Log("Couldn't get renderer ");
         }
     }
 

@@ -10437,6 +10437,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 658436777}
     - target: {fileID: 2135848149387887049, guid: ad34fb87f09b61b498f584e4e5bc458d, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135848149387887049, guid: ad34fb87f09b61b498f584e4e5bc458d, type: 3}
       propertyPath: boostIfFar
       value: 1
       objectReference: {fileID: 0}
@@ -10720,6 +10724,10 @@ PrefabInstance:
     - target: {fileID: 8775563876472889649, guid: 5f0457a6442b64342935c39315040a02, type: 3}
       propertyPath: m_Name
       value: DeathBeam
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775563876472889650, guid: 5f0457a6442b64342935c39315040a02, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8775563876472889653, guid: 5f0457a6442b64342935c39315040a02, type: 3}
       propertyPath: m_RootOrder

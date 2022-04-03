@@ -55,7 +55,7 @@ public class DeathBeam : MonoBehaviour
             }
             Quaternion rotation = 
                 Quaternion.Euler(0, 0, 
-                Vector3.Angle(giverObject.transform.up, direction));
+                left * Vector3.Angle(giverObject.transform.up, direction));
             pSystem.transform.rotation = rotation;
         }
        

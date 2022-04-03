@@ -5,7 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public int hitPoints = 10;
-    bool alive = true;
+    public bool alive = true;
     SpriteRenderer spriteRenderer;
     public Sprite skeleton;
 

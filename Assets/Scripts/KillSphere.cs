@@ -7,6 +7,7 @@ public class KillSphere : MonoBehaviour
 {
     public GameObject parent;
     public LayerMask targetLayer;
+    public DeathBeam beam;
     public float radius = 2f;
     public int damage = 1;
     public float damageToPlayerAge = 0.25f;
@@ -33,21 +34,45 @@ public class KillSphere : MonoBehaviour
 
         if ((targetLayer.value & (1 << collision.gameObject.layer)) > 0)
         {
+            
             if(collision.gameObject.GetComponent<Health>())
             {
-                collision.gameObject.GetComponent<Health>().takeDamage(damage, parent);
+                Health targetHealth = collision.gameObject.GetComponent<Health>();
+                if (targetHealth.alive)
+                {
+                    beam.setGiver(collision.gameObject);
+                    beam.setGiving(true);
+                }
+                else
+                {
+                    beam.setGiving(false);
+                }
+                targetHealth.takeDamage(damage, parent);
                 cooldownTimer = cooldownTime;
             }
             if(collision.gameObject.GetComponent<PlayerController>())
             {
-                if(collision.gameObject.GetComponent<PlayerController>().alive)
+                PlayerController pController = 
+                    collision.gameObject.GetComponent<PlayerController>();
+                if (pController.alive)
                 {
-                    collision.gameObject
-                        .GetComponent<PlayerController>().moveSpeed -= damageToPlayerAge;
+                    beam.setGiver(collision.gameObject);
+                    beam.setGiving(true);
+
+                    pController.moveSpeed -= damageToPlayerAge;
                     cooldownTimer = cooldownTime;
+                }
+                else
+                {
+                    beam.setGiving(false);
                 }
             }
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        beam.setGiving(false);
     }
 
     private void FixedUpdate()

@@ -7,6 +7,10 @@ public class Dissolve : MonoBehaviour
     Material material;
     bool fadeIn = false;
     public float fade = 1f;
+    public float fadeTimeScale = 2f;
+    public float minScale = 35.0f;
+    public float maxScale = 60.0f;
+    public float scale = 35.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +22,7 @@ public class Dissolve : MonoBehaviour
     void Update()
     {
         // pulse between fully faded and fully visible
-        if(fade <= 0)
+        if(fade <= 0.25f)
         {
             fadeIn = true;
         }
@@ -28,12 +32,22 @@ public class Dissolve : MonoBehaviour
         }
         if(fadeIn)
         {
-            fade += Time.deltaTime;
+            fade += Time.deltaTime / fadeTimeScale;
         }
         else
         {
-            fade -= Time.deltaTime;
+            fade -= Time.deltaTime / fadeTimeScale;
         }
         material.SetFloat("_Fade", fade);
+
+//        if(scale >= minScale)
+//        {
+//            scale -= Time.deltaTime;
+//        }
+//        else
+//        {
+//            scale = maxScale;
+//        }
+//        material.SetFloat("_Scale", scale);
     }
 }

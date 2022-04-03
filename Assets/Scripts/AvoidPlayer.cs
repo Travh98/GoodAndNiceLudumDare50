@@ -9,10 +9,12 @@ public class AvoidPlayer : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject target;
     Vector2 movement = Vector2.zero;
+    SpriteRenderer renderer;
 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        renderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -31,6 +33,22 @@ public class AvoidPlayer : MonoBehaviour
                 movement = -(target.gameObject.transform.position -
                     gameObject.transform.position).normalized;
             }
+        }
+
+        if (renderer)
+        {
+            if (movement.x >= -0.1f)
+            {
+                renderer.flipX = false;
+            }
+            else
+            {
+                renderer.flipX = true;
+            }
+        }
+        else
+        {
+            Debug.Log("Couldn't get renderer ");
         }
     }
 

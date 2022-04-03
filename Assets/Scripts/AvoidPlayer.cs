@@ -9,12 +9,12 @@ public class AvoidPlayer : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject target;
     Vector2 movement = Vector2.zero;
-    SpriteRenderer renderer;
+    SpriteRenderer spriteRenderer;
 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        renderer = gameObject.GetComponent<SpriteRenderer>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -35,15 +35,15 @@ public class AvoidPlayer : MonoBehaviour
             }
         }
 
-        if (renderer)
+        if (spriteRenderer)
         {
             if (movement.x >= -0.1f)
             {
-                renderer.flipX = false;
+                spriteRenderer.flipX = false;
             }
             else
             {
-                renderer.flipX = true;
+                spriteRenderer.flipX = true;
             }
         }
         else

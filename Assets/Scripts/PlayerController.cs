@@ -9,13 +9,13 @@ public class PlayerController : MonoBehaviour
     Vector2 movement;
     private PlayerControls playerControls;
     public bool alive = true;
-    SpriteRenderer renderer;
+    SpriteRenderer spriteRenderer;
 
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         playerControls = new PlayerControls();
-        renderer = gameObject.GetComponent<SpriteRenderer>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     private void OnEnable()
@@ -45,15 +45,15 @@ public class PlayerController : MonoBehaviour
             OnDeath();
         }
 
-        if (renderer)
+        if (spriteRenderer)
         {
-            if (movement.x >= 0.0f)
+            if (movement.x > 0.0f)
             {
-                renderer.flipX = false;
+                spriteRenderer.flipX = false;
             }
-            else
+            else if(movement.x < 0.0f)
             {
-                renderer.flipX = true;
+                spriteRenderer.flipX = true;
             }
         }
         else

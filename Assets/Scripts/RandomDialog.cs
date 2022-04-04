@@ -58,6 +58,19 @@ public class RandomDialog : MonoBehaviour
             textMeshPro.enabled = true;
             textUpTimer = textUpTime;
         }
+        if(gameObject.GetComponent<AudioSource>())
+        {
+            AudioSource sound = gameObject.GetComponent<AudioSource>();
+            if (sound.pitch >= 1.5f)
+            {
+                sound.pitch -= Random.Range(0.1f, 0.5f);
+            }
+            if (sound.pitch <= 0.5f)
+            {
+                sound.pitch += Random.Range(0.1f, 0.5f);
+            }
+            sound.Play();
+        }
     }
     void HideDialog()
     {

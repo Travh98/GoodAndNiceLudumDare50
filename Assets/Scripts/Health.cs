@@ -5,7 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public int hitPoints = 10;
-    bool alive = true;
+    public bool alive = true;
     SpriteRenderer spriteRenderer;
     public Sprite skeleton;
 
@@ -39,6 +39,10 @@ public class Health : MonoBehaviour
         if(gameObject.GetComponent<AvoidPlayer>())
         {
             gameObject.GetComponent<AvoidPlayer>().Freeze();
+        }
+        if(gameObject.GetComponent<AudioSource>())
+        {
+            gameObject.GetComponent<AudioSource>().Play();
         }
         if(spriteRenderer && skeleton)
         {

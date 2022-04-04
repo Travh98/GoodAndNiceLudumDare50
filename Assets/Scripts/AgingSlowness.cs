@@ -29,7 +29,11 @@ public class AgingSlowness : MonoBehaviour
             {
                 Debug.Log("Failed to die lol");
             }
-            if(husband.GetComponentInChildren<RandomDialog>())
+            if (gameObject.GetComponent<AudioSource>())
+            {
+                gameObject.GetComponent<AudioSource>().Play();
+            }
+            if (husband.GetComponentInChildren<RandomDialog>())
             {
                 RandomDialog husbandDialog = husband.GetComponentInChildren<RandomDialog>();
                 husbandDialog.dialogList.Clear();

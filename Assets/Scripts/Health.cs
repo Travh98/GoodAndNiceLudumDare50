@@ -40,6 +40,10 @@ public class Health : MonoBehaviour
         {
             gameObject.GetComponent<AvoidPlayer>().Freeze();
         }
+        if(gameObject.GetComponent<AudioSource>())
+        {
+            gameObject.GetComponent<AudioSource>().Play();
+        }
         if(spriteRenderer && skeleton)
         {
             spriteRenderer.sprite = skeleton;

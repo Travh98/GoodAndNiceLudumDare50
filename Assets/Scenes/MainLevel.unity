@@ -1319,8 +1319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35bd692642d62814aba87a0ad8a836ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  stoppingDistance: 2
+  moveSpeed: 1.5
+  stoppingDistance: 4
   stopWhenClose: 0
   rb: {fileID: 0}
   target: {fileID: 942574856}
@@ -1526,7 +1526,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341725368}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.39, y: 0.52, z: 0}
+  m_LocalPosition: {x: 9.53, y: 2.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1491112637}

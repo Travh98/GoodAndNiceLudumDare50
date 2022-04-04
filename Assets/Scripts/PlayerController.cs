@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     public bool alive = true;
     SpriteRenderer spriteRenderer;
 
+    float restartTimer = 6f;
+    public float timeBeforeRestart = 6.0f;
+
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -39,10 +42,22 @@ public class PlayerController : MonoBehaviour
         {
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         }
-        if(moveSpeed <= 0)
+
+        if (moveSpeed <= 0 && alive)
         {
             // Too slow and old to live
             OnDeath();
+        }
+
+        if(!alive && restartTimer > 0.0f)
+        {
+            restartTimer -= Time.fixedDeltaTime;
+        }
+        if(!alive && restartTimer <= 0.0f)
+        {
+            gameObject.AddComponent<PlayerDied>();
+            PlayerDied restart = gameObject.GetComponent<PlayerDied>();
+            restart.RestartGame();
         }
 
         if (spriteRenderer)
@@ -67,6 +82,7 @@ public class PlayerController : MonoBehaviour
     {
         Destroy(rb);
         alive = false;
+        restartTimer = timeBeforeRestart;
         // You dead son
     }
 }

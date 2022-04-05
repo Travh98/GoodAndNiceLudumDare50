@@ -22,6 +22,14 @@ public class AgingSlowness : MonoBehaviour
     {
         if (spriteRenderer && skeleton)
         {
+            if(gameObject.GetComponent<Animator>())
+            {
+                gameObject.GetComponent<Animator>().Play("MabelDie");
+            }
+            if(husband.GetComponent<Animator>())
+            {
+                husband.GetComponent<Animator>().Play("AlbertDeath");
+            }
             spriteRenderer.sprite = skeleton;
         }
         else

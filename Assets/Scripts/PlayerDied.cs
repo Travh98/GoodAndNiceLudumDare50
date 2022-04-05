@@ -7,7 +7,7 @@ public class PlayerDied : MonoBehaviour
 {
     public void RestartGame()
     {
-        SceneManager.LoadScene("StartScene");
+        SceneManager.LoadScene("Start Screen");
     }
 }
 

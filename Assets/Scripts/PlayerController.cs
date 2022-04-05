@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     float restartTimer = 6f;
-    public float timeBeforeRestart = 6.0f;
+    public float timeBeforeRestart = 4.0f;
 
     void Awake()
     {

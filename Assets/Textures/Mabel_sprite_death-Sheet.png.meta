@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: c06567f23ba498343ba739dd5de773bf
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3070318983365515411
+    second: Mabel_sprite_death-Sheet_0
+  - first:
+      213: -9013160031423842787
+    second: Mabel_sprite_death-Sheet_1
+  - first:
+      213: -27395224901635172
+    second: Mabel_sprite_death-Sheet_2
+  - first:
+      213: 8536494783653213836
+    second: Mabel_sprite_death-Sheet_3
+  - first:
+      213: -5336972346760574877
+    second: Mabel_sprite_death-Sheet_4
+  - first:
+      213: -2391550353677659610
+    second: Mabel_sprite_death-Sheet_5
+  - first:
+      213: 8614582892810636943
+    second: Mabel_sprite_death-Sheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +122,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mabel_sprite_death-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 60
+        height: 60
+      alignment: 9
+      pivot: {x: 0.29902384, y: 0.37941438}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398d3ae19d6fb9a20800000000000000
+      internalID: 3070318983365515411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mabel_sprite_death-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 60
+        height: 60
+      alignment: 9
+      pivot: {x: 0.29902384, y: 0.34926808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16bb3784b2dae280800000000000000
+      internalID: -9013160031423842787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mabel_sprite_death-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 60
+        height: 60
+      alignment: 9
+      pivot: {x: 0.29902384, y: 0.34926808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c933237203cae9ff0800000000000000
+      internalID: -27395224901635172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mabel_sprite_death-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 60
+        height: 60
+      alignment: 9
+      pivot: {x: 0.29902384, y: 0.3291705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86ff9607c8b77670800000000000000
+      internalID: 8536494783653213836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mabel_sprite_death-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 119
+        width: 60
+        height: 60
+      alignment: 9
+      pivot: {x: 0.29902384, y: 0.30907288}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 368c0475de34fe5b0800000000000000
+      internalID: -5336972346760574877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mabel_sprite_death-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 60
+        height: 60
+      alignment: 9
+      pivot: {x: 0.29902384, y: 0.29902396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6225592df918fced0800000000000000
+      internalID: -2391550353677659610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mabel_sprite_death-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 60
+        height: 60
+      alignment: 9
+      pivot: {x: 0.28897506, y: 0.26887757}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e822ebf752d8770800000000000000
+      internalID: 8614582892810636943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
